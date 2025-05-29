@@ -1,8 +1,37 @@
-
-
 spring:
   application:
     name: shop
 
+#    postgres
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/parworld
+    username: postgres
+    password: loremipsum
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgresPlusDialect
+      generate_statistics: false
+      use_sql_comments: false
+
+
+#psql -U postgres
+
+
+#    Mysql
+#    datasource:
+#      url: jdbc:mysql://localhost:3306/spring_security
+#      username: root
+#      password: 11004@Wanny
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+
 server:
   port: 8081
+
+
